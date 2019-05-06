@@ -21,10 +21,7 @@
 
 'use strict';
 
-/*<replacement>*/
-
-var Buffer = require('safe-buffer').Buffer;
-/*</replacement>*/
+import { Buffer } from '../safe-buffer/safe-buffer.js'
 
 var isEncoding = Buffer.isEncoding || function (encoding) {
   encoding = '' + encoding;
@@ -75,8 +72,7 @@ function normalizeEncoding(enc) {
 // StringDecoder provides an interface for efficiently splitting a series of
 // buffers into a series of JS strings without breaking apart multi-byte
 // characters.
-exports.StringDecoder = StringDecoder;
-function StringDecoder(encoding) {
+export var StringDecoder = function (encoding) {
   this.encoding = normalizeEncoding(encoding);
   var nb;
   switch (this.encoding) {
@@ -294,3 +290,14 @@ function simpleWrite(buf) {
 function simpleEnd(buf) {
   return buf && buf.length ? this.write(buf) : '';
 }
+
+var string_decoder = {
+  StringDecoder: StringDecoder
+}
+if (typeof(process) !== 'undefined' && process.release && process.release.name === 'node' && typeof (require) !== 'undefined') {
+  string_decoder = require('string_decoder')
+  StringDecoder = string_decoder.StringDecoder || StringDecoder
+}
+
+export default StringDecoder
+

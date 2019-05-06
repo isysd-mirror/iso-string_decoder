@@ -1,13 +1,11 @@
 {
-  "name": "string_decoder",
+  "name": "@guld/string_decoder",
   "version": "1.2.0",
   "description": "The string_decoder module from Node core",
-  "main": "lib/string_decoder.js",
-  "files": [
-    "lib"
-  ],
+  "main": "string_decoder.node.js",
+  "module": "string_decoder.js",
   "dependencies": {
-    "safe-buffer": "~5.1.0"
+    "@guld/safe-buffer": "../safe-buffer"
   },
   "devDependencies": {
     "babel-polyfill": "^6.23.0",
@@ -21,9 +19,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/nodejs/string_decoder.git"
+    "url": "https://iramiller.com/src/js/string_decoder/.git"
   },
-  "homepage": "https://github.com/nodejs/string_decoder",
+  "homepage": "https://iramiller.com/src/js/string_decoder",
   "keywords": [
     "string",
     "decoder",
