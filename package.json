@@ -1,11 +1,11 @@
 {
-  "name": "@guld/string_decoder",
+  "name": "iso-string_decoder",
   "version": "1.2.0",
   "description": "The string_decoder module from Node core",
   "main": "string_decoder.node.js",
   "module": "string_decoder.js",
   "dependencies": {
-    "@guld/safe-buffer": "../safe-buffer"
+    "iso-safe-buffer": "../iso-safe-buffer"
   },
   "devDependencies": {
     "babel-polyfill": "^6.23.0",
@@ -19,9 +19,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://iramiller.com/src/js/string_decoder/.git"
+    "url": "https://github.com/isysd-mirror/iso-string_decoder.git"
   },
-  "homepage": "https://iramiller.com/src/js/string_decoder",
+  "homepage": "https://github.com/isysd-mirror/iso-string_decoder",
   "keywords": [
     "string",
     "decoder",

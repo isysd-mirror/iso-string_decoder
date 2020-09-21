@@ -21,7 +21,7 @@
 
 'use strict';
 
-import { Buffer } from '../safe-buffer/safe-buffer.js'
+import { Buffer } from '../iso-safe-buffer/safe-buffer.js'
 
 var isEncoding = Buffer.isEncoding || function (encoding) {
   encoding = '' + encoding;
